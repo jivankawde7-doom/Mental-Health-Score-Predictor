@@ -1,13 +1,11 @@
-
-  
-    // --- APP STATE & CONSTANTS ---
+// --- APP STATE & CONSTANTS ---
     const TOP_COUNTRIES = new Set([
       'Other', 'India', 'USA', 'Canada', 'Australia',
       'UK', 'Germany', 'Mexico', 'Turkey', 'France'
     ]);
 
     let config = {
-      apiUrl: 'http://127.0.0.1:8000/predict',
+      apiUrl: 'https://mental-health-score-predictor-xjck.onrender.com',
       forceSimulation: false,
       isApiOnline: false
     };
