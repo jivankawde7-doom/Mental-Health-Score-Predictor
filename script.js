@@ -319,7 +319,15 @@
 
           if (res.ok) {
             const data = await res.json();
-            finalScore = parseFloat(data.predicted_mental_health_score);
+            const rawScore = Number(data.predicted_mental_health_score);
+
+          if (!Number.isFinite(rawScore)) {
+              throw new Error(
+                "Invalid model score: " + data.predicted_mental_health_score
+              );
+            }
+            
+            finalScore = rawScore * 10;
             usedEngine = "FastAPI Service (Live)";
             setBackendStatus(true);
           } else {
