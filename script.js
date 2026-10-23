@@ -5,7 +5,7 @@
     ]);
 
     let config = {
-      apiUrl: 'https://mental-health-score-predictor-xjck.onrender.com',
+      apiUrl: 'https://mental-health-score-predictor-xjck.onrender.com/predict',
       forceSimulation: false,
       isApiOnline: false
     };
